@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Contacto | Agente IA · WhatsApp Business</title>
+    <!-- Misma tipografía que la web original -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d0f;  /* Fondo gris oscuro original */
+            color: #e8e8e8;
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - 120px);
+        }
+
+        /* Panel principal */
+        .card-contact {
+            background: #141416;
+            border-radius: 2rem;
+            border: 1px solid rgba(255, 128, 33, 0.15);
+            padding: 3rem 2.5rem;
+            max-width: 650px;
+            width: 100%;
+            margin: 0 auto;
+            transition: all 0.2s;
+        }
+
+        /* título principal con color naranja original */
+        .page-title {
+            font-size: 2.7rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: #ff8021;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #8a8a8f;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 128, 33, 0.2);
+        }
+
+        /* Información de contacto */
+        .contact-info {
+            margin: 2rem 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.2s;
+        }
+
+        .contact-item:hover {
+            border-bottom-color: rgba(255, 128, 33, 0.3);
+            transform: translateX(5px);
+        }
+
+        .contact-icon {
+            width: 52px;
+            height: 52px;
+            background: rgba(255, 128, 33, 0.12);
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            border: 1px solid rgba(255, 128, 33, 0.2);
+        }
+
+        .contact-details {
+            flex: 1;
+        }
+
+        .contact-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            color: #ff8021;
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-value {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #e8e8e8;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-value a {
+            color: #e8e8e8;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-value a:hover {
+            color: #ff8021;
+        }
+
+        /* Botón volver - estilo original naranja */
+        .btn-volver {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #ff8021;
+            color: #0d0d0f;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-top: 1.5rem;
+            text-decoration: none;
+            gap: 0.5rem;
+            width: 100%;
+        }
+
+        .btn-volver:hover {
+            background: #ff9540;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(255, 128, 33, 0.3);
+        }
+
+        /* Badge horario */
+        .schedule-badge {
+            background: rgba(255, 128, 33, 0.08);
+            padding: 1rem;
+            border-radius: 1rem;
+            margin-top: 1.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #8a8a8f;
+            border: 1px solid rgba(255, 128, 33, 0.1);
+        }
+
+        .schedule-badge strong {
+            color: #ff8021;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #6a6a70;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 1.5rem;
+            background-color: transparent;
+        }
+
+        footer a {
+            color: #ff8021;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ff9540;
+        }
+
+        @media (max-width: 700px) {
+            .card-contact {
+                padding: 2rem 1.5rem;
+            }
+            .page-title {
+                font-size: 2rem;
+            }
+            .contact-value {
+                font-size: 1rem;
+            }
+            .contact-icon {
+                width: 44px;
+                height: 44px;
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<main class="container">
+    <div class="card-contact">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <h1 class="page-title">Contacto</h1>
+            <span style="background: rgba(255,128,33,0.12); padding:0.2rem 1rem; border-radius:40px; font-size:0.75rem; color:#ff8021;">📞 Soporte directo</span>
+        </div>
+        <div class="subtitle">Estamos aquí para ayudarte · Resolvemos tus dudas en menos de 2h</div>
+
+        <div class="contact-info">
+            <!-- Teléfono -->
+            <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div class="contact-details">
+                    <div class="contact-label">Teléfono / WhatsApp</div>
+                    <div class="contact-value">
+                        <a href="tel:+34123456789">+34 123 456 789</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="contact-item">
+                <div class="contact-icon">✉️</div>
+                <div class="contact-details">
+                    <div class="contact-label">Email</div>
+                    <div class="contact-value">
+                        <a href="mailto:hola@agenteia.com">hola@agenteia.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Email soporte técnico -->
+            <div class="contact-item">
+                <div class="contact-icon">⚙️</div>
+                <div class="contact-details">
+                    <div class="contact-label">Soporte técnico</div>
+                    <div class="contact-value">
+                        <a href="mailto:soporte@agenteia.com">soporte@agenteia.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="schedule-badge">
+            🕒 <strong>Horario de atención</strong> · Lunes a Viernes de 9:00 a 19:00<br>
+            📱 Fuera de horario escríbenos por WhatsApp y te respondemos al instante
+        </div>
+
+        <!-- SOLO BOTÓN DE VOLVER, SIN MENÚ -->
+        <a href="https://mis-app.github.io/agente-ia/" class="btn-volver">
+            ← Volver al inicio
+        </a>
+    </div>
+</main>
+
+<footer>
+    <div>
+        <p>© 2026 Agente IA — Asistente impulsado por ChatGPT + API Oficial de WhatsApp Business</p>
+        <p style="margin-top: 0.5rem; font-size:0.75rem;">
+            <a href="#">Política de Privacidad</a> · 
+            <a href="#">Términos de Servicio</a> · 
+            <a href="#">Política de Cookies</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
