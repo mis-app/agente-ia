@@ -883,7 +883,23 @@
 	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
 	createChat({
-		webhookUrl: 'https://dentisalud.agente-ia.pro/webhook/eeabd248-1cb0-43a7-b28c-55e084e646e0/chat'
+		webhookUrl: 'https://dentisalud.agente-ia.pro/webhook/eeabd248-1cb0-43a7-b28c-55e084e646e0/chat',
+		// Personalización del nombre "Juan" y los mensajes
+		initialMessages: [
+			'¡Hola! Soy Juan, tu asistente 🤖', // Mensaje inicial con el nombre Juan
+			'Buenas, dime en qué quieres que te ayude' // Texto de bienvenida personalizado
+		],
+		i18n: {
+			en: {
+				title: 'Juan - Asistente IA', // Título personalizado con el nombre
+				subtitle: 'Inicia una conversación, estoy activo 24/7', // Texto solicitado
+				footer: '',
+				getStarted: 'Nueva conversación',
+				inputPlaceholder: 'Escribe tu mensaje...',
+			},
+		},
+		// Opcional: mostrar pantalla de bienvenida al abrir el chat (si la deseas)
+		// showWelcomeScreen: true,
 	});
 </script>
 <!-- fin botón chat n8n-->
